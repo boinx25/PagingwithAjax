@@ -1,0 +1,45 @@
+.container
+{
+	width:200px;
+	margin:0 auto;
+}
+
+#navigator
+{
+	width:300px;
+	position:relative;
+	left:-25px;
+}	
+
+ul
+{
+	display:none;
+}
+
+a:link
+{
+	text-decoration: none;
+}
+
+a:visited
+{
+	color:black;
+}
+
+a:hover
+{
+	background-color:black;
+	color:white;
+}
+
+.current
+{
+	display:block;
+}
+
+#pager
+{
+
+	 display:block;
+
+}
