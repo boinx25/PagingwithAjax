@@ -14,6 +14,19 @@
 ul
 {
 	display:none;
+	list-style-type: none;
+}
+
+.green
+{
+	list-style-image: url("../ajaxAPI/cross-green.png");
+	vertical-align:middle;
+}
+
+.red
+{
+	list-style-image: url("../ajaxAPI/cross-on.png");
+	vertical-align:middle;
 }
 
 a:link

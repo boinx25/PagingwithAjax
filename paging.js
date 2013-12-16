@@ -7,6 +7,15 @@ $(document).ready(function(){
 
 			currentPage = page;
 
+			// if(currentPage % 2 == 0){
+
+			// 	$("ul").removeClass("red");
+			// 	$("ul").addClass("green");
+
+			// }else{
+			// 	$("ul").removeClass("green");
+			// 	$("ul").addClass("red");
+			// }
 			$.ajax({
 	  			type: "GET",
 			  	url: "http://localhost:8080/data",
@@ -15,8 +24,8 @@ $(document).ready(function(){
 			.done(function( msg ){
 			    console.log( msg );
 			    for(var b=0;b<msg.data.length;b++){
-			    console.log(msg.data[b]);
-			    $("ul").append("<li>" + msg.data[b].item + "</li>");
+	
+				   	$("ul").append("<li>" +"<img src='" + msg.data[b].icon + "'" + "alt=' ' />" + msg.data[b].item + "</li>");
 				}
 	 	   });
 			
