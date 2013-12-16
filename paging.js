@@ -6,7 +6,7 @@ $(document).ready(function(){
 		function switchPage(page){
 
 			currentPage = page;
-
+			$("ul").removeClass();
 			// if(currentPage % 2 == 0){
 
 			// 	$("ul").removeClass("red");
@@ -22,11 +22,18 @@ $(document).ready(function(){
 			  	data: {page:currentPage}
 			})
 			.done(function( msg ){
-			    console.log( msg );
+			    console.log(msg);
 			    for(var b=0;b<msg.data.length;b++){
-	
-				   	$("ul").append("<li>" +"<img src='" + msg.data[b].icon + "'" + "alt=' ' />" + msg.data[b].item + "</li>");
+				
+				   	// $("ul").append("<li>" +"<img src='" + msg.data[b].icon + "'" + "alt=' ' />" + msg.data[b].item + "</li>");
+				   	$("ul").append("<li>" + msg.data[b].item + "</li>");
+				   
+
+				   	  
 				}
+					$("ul").addClass(msg.listClass);	
+					console.log(msg.listClass);	
+						
 	 	   });
 			
 			// $("ul").removeClass("current");
@@ -35,7 +42,7 @@ $(document).ready(function(){
 
 
 		$("#navigator a").click(function(){
-			$(".current").empty();
+			$("ul").empty();
 			if($(this).hasClass("nav2")){
 				if(currentPage < maxPage)
 				currentPage++;

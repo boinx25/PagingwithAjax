@@ -11,19 +11,19 @@
 	left:-25px;
 }	
 
-ul
+/*ul
 {
 	display:none;
 	list-style-type: none;
-}
+}*/
 
-.green
+.green-icon
 {
 	list-style-image: url("../ajaxAPI/cross-green.png");
 	vertical-align:middle;
 }
 
-.red
+.red-icon
 {
 	list-style-image: url("../ajaxAPI/cross-on.png");
 	vertical-align:middle;
